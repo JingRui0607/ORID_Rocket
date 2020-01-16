@@ -1,0 +1,212 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1615944E-65D0-4E60-9AE9-AAF069B96EAC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ORID_api_Rocket</RootNamespace>
+    <AssemblyName>ORID_api_Rocket</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44375</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CreateORID.sql" />
+    <Content Include="Global.asax" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="LastDayData.sql" />
+    <Content Include="ShowTarget.sql" />
+    <Content Include="TestCreateORID.aspx" />
+    <Content Include="ThatDay.sql" />
+    <Content Include="Web.config" />
+    <Content Include="WhoseData.sql" />
+    <Content Include="WhoseFriday.sql" />
+    <Content Include="WhoseMood.sql" />
+    <Content Include="WhoseTarget.sql" />
+    <Content Include="WhoseWeekData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckAndTarget.ashx.cs">
+      <DependentUpon>CheckAndTarget.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateORID.ashx.cs">
+      <DependentUpon>CreateORID.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="EveryPartners.ashx.cs">
+      <DependentUpon>EveryPartners.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LastDayData.ashx.cs">
+      <DependentUpon>LastDayData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ORIDTarget.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectStudents.ashx.cs">
+      <DependentUpon>SelectStudents.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowName.ashx.cs">
+      <DependentUpon>ShowName.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowTarget.ashx.cs">
+      <DependentUpon>ShowTarget.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="TestCreateORID.aspx.cs">
+      <DependentUpon>TestCreateORID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestCreateORID.aspx.designer.cs">
+      <DependentUpon>TestCreateORID.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThatDay.ashx.cs">
+      <DependentUpon>ThatDay.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Verification.ashx.cs">
+      <DependentUpon>Verification.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WhoseData.ashx.cs">
+      <DependentUpon>WhoseData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WhoseFriday.ashx.cs">
+      <DependentUpon>WhoseFriday.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WhoseMood.ashx.cs">
+      <DependentUpon>WhoseMood.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WhoseOccupation.ashx.cs">
+      <DependentUpon>WhoseOccupation.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WhoseTarget.ashx.cs">
+      <DependentUpon>WhoseTarget.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WhoseWeekData.ashx.cs">
+      <DependentUpon>WhoseWeekData.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LastDayData.ashx" />
+    <Content Include="CreateORID.ashx" />
+    <Content Include="CheckAndTarget.ashx" />
+    <Content Include="EveryPartners.ashx" />
+    <None Include="packages.config" />
+    <Content Include="ThatDay.ashx" />
+    <Content Include="ShowTarget.ashx" />
+    <Content Include="ShowName.ashx" />
+    <Content Include="Verification.ashx" />
+    <Content Include="SelectStudents.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="WhoseData.ashx" />
+    <Content Include="WhoseMood.ashx" />
+    <Content Include="WhoseFriday.ashx" />
+    <Content Include="WhoseTarget.ashx" />
+    <Content Include="WhoseWeekData.ashx" />
+    <Content Include="WhoseOccupation.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50411</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44375/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
