@@ -54,4 +54,3 @@ C:\Users\jingrui\source\repos\ORID_api_Rocket\ORID_api_Rocket\bin\Microsoft.Code
 C:\Users\jingrui\source\repos\ORID_api_Rocket\ORID_api_Rocket\obj\Debug\ORID_api_Rocket.csproj.CopyComplete
 C:\Users\jingrui\source\repos\ORID_api_Rocket\ORID_api_Rocket\obj\Debug\ORID_api_Rocket.dll
 C:\Users\jingrui\source\repos\ORID_api_Rocket\ORID_api_Rocket\obj\Debug\ORID_api_Rocket.pdb
-C:\Users\jingrui\source\repos\ORID_api_Rocket\ORID_api_Rocket\obj\Debug\ORID_api_Rocket.csprojAssemblyReference.cache

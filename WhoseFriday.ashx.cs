@@ -26,9 +26,13 @@ namespace ORID_api_Rocket
             
            
             DataTable user = new DataTable();
+            DataTable user2 = new DataTable();
             //string[] Friarray = new string[user.Rows.Count + 1];
-           
-                SqlCommand command = new SqlCommand(sql, connection);
+
+
+            //取得每周目標
+            SqlCommand command = new SqlCommand(sql, connection);
+
                 command.Parameters.Add("@name", SqlDbType.Int);
                 command.Parameters["@name"].Value = context.Request.QueryString["Sid"];
 
@@ -39,14 +43,25 @@ namespace ORID_api_Rocket
                
                 Adapter.Fill(user);
 
-                
+            //取得學員名字
+            SqlCommand command2 = new SqlCommand("select name from Student where id=@name", connection);
+            command2.Parameters.Add("@name", SqlDbType.Int);
+            command2.Parameters["@name"].Value = context.Request.QueryString["Sid"];
 
+            SqlDataAdapter Adapter2 = new SqlDataAdapter(command2);
+
+            Adapter2.Fill(user2);
+
+
+
+
+            //存入陣列
             string[] Friarray = new string[user.Rows.Count + 1];
 
-            
-            Friarray[0] = context.Request.QueryString["Sid"];
-           
 
+          
+
+            Friarray[0] = user2.Rows[0][0].ToString();
 
             for (int i = 1; i <= user.Rows.Count; i++)
             {

@@ -1,5 +1,5 @@
 ﻿SELECT   
-Student.id,Student.name,
+Student.id,Student.name,Student.class,Student.image,
 
 CONVERT(varchar(10), 填寫時間, 111)as date1, 
 case  

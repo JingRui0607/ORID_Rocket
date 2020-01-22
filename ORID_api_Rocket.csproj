@@ -75,6 +75,8 @@
     <Content Include="HtmlPage1.html" />
     <Content Include="LastDayData.sql" />
     <Content Include="ShowTarget.sql" />
+    <Content Include="TargetofDate.sql" />
+    <Content Include="TargetofWeek.sql" />
     <Content Include="TestCreateORID.aspx" />
     <Content Include="ThatDay.sql" />
     <Content Include="Web.config" />
@@ -110,6 +112,12 @@
     </Compile>
     <Compile Include="ShowTarget.ashx.cs">
       <DependentUpon>ShowTarget.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="TargetofDate.ashx.cs">
+      <DependentUpon>TargetofDate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="TargetofWeek.ashx.cs">
+      <DependentUpon>TargetofWeek.ashx</DependentUpon>
     </Compile>
     <Compile Include="TestCreateORID.aspx.cs">
       <DependentUpon>TestCreateORID.aspx</DependentUpon>
@@ -154,6 +162,8 @@
     <Content Include="ShowName.ashx" />
     <Content Include="Verification.ashx" />
     <Content Include="SelectStudents.ashx" />
+    <Content Include="TargetofWeek.ashx" />
+    <Content Include="TargetofDate.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

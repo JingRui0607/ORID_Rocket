@@ -20,7 +20,7 @@ namespace ORID_api_Rocket
             string config = System.Web.Configuration.WebConfigurationManager
                 .ConnectionStrings["ORIDConnectionString"].ConnectionString;
             SqlConnection Connection = new SqlConnection(config);
-            SqlCommand command1 = new SqlCommand(" SELECT id,name, image,class, startDate, endDate, exOccupation, futureOccupation  FROM  Student ", Connection);
+            SqlCommand command1 = new SqlCommand(" SELECT id,name, image,class, startDate, endDate, exOccupation, futureOccupation  FROM  Student where presence='true' ", Connection);
             //SqlCommand command1 = new SqlCommand(" SELECT name, class FROM  Students ", Connection);
             
 

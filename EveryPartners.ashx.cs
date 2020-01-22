@@ -23,7 +23,7 @@ namespace ORID_api_Rocket
            
             DateTime time = DateTime.Now;
             
-            SqlCommand command1 = new SqlCommand($"select id, name from Student where endDate>='{time.ToString("yyyy/MM/dd")}'", Connection);
+            SqlCommand command1 = new SqlCommand($"select id, name from Student where endDate>='{time.ToString("yyyy/MM/dd")}' and presence='true'", Connection);
             
             SqlDataAdapter loginAdapter1 = new SqlDataAdapter(command1);
             DataTable user1 = new DataTable();

@@ -23,7 +23,7 @@ select   @totalWeek = DATEDIFF(WEEK,@Startday,@Endday)+1;
 
 
 
-SELECT    Student.name, replace(目標完成度,'%','') as reach , DATEDIFF(WEEK,@Startday,填寫時間)+1 as week
+SELECT    Student.name as name, replace(目標完成度,'%','') as reach , DATEDIFF(WEEK,@Startday,填寫時間)+1 as week
 
 into #week2
 FROM            ORID_data INNER JOIN
@@ -32,10 +32,10 @@ FROM            ORID_data INNER JOIN
 
 
 
-where (ORID_data.Sid = 1) and DATEPART(weekday , 填寫時間)=6
+where (ORID_data.Sid =  @name) and DATEPART(weekday , 填寫時間)=6
 
 
-SELECT    isnull(#week2.reach,0) as reach
+SELECT   isnull(#week2.reach,0) as reach
 FROM     #week2 RIGHT OUTER JOIN
               week ON #week2.week = week.week
 
